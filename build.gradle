@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.testng:testng:6.14.3'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.1.2'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.5.2'
+    testImplementation 'io.cucumber:cucumber-java:6.10.0'
+    testImplementation 'io.cucumber:cucumber-testng:6.10.0'
+}
+
+task automationTest(type: Test) {
+    useTestNG() {
+        useDefaultListeners = true; // for listeners
+        scanForTestClasses = false; // we want to trigger suite
+        testLogging.showStandardStreams = true; // for logs
+
+        systemProperties project.properties.subMap(["Type"])
+        String testValue = System.getProperty("Type");
+        System.out.println(testValue)
+
+        if (testValue.equals("webTestingAutomationAssessment")) {
+            suites "src/test/webTestingAutomationAssessment.xml"
+        }       }
+}
