@@ -19,4 +19,4 @@ Feature: Fill-up basic information
     Then Navigate to the address page
     Examples:
       | nidNumber | fatherName | motherName | mobileNumber | emailAddress      |
-      |8231771135 |Md. Siddiq  |Amena Begum | 01702312169  | sajibsqa@gmail.com|
+      |8231771135 |Md. Siddiq  |Amena Begum | 01902312169  | sajibsqa@gmail.com|
