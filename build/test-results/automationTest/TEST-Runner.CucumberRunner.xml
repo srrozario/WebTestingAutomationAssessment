@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Runner.CucumberRunner" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-03-12T10:19:13" hostname="RICHI" time="191.192">
+  <properties/>
+  <testcase name="runScenario[0](&quot;Select a job circular&quot;, &quot;Optional[Select Job Circular]&quot;)" classname="Runner.CucumberRunner" time="19.196"/>
+  <testcase name="runScenario[1](&quot;Select a vacancy&quot;, &quot;Optional[Select Vacancy]&quot;)" classname="Runner.CucumberRunner" time="4.679"/>
+  <testcase name="runScenario[2](&quot;Apply for a vacancy without login&quot;, &quot;Optional[Apply For A Vacancy Without Login]&quot;)" classname="Runner.CucumberRunner" time="5.15"/>
+  <testcase name="runScenario[3](&quot;Fill-up basic user information&quot;, &quot;Optional[Fill-up basic information]&quot;)" classname="Runner.CucumberRunner" time="61.73"/>
+  <testcase name="runScenario[4](&quot;Fill-up user address information&quot;, &quot;Optional[Fill-up address information]&quot;)" classname="Runner.CucumberRunner" time="23.768"/>
+  <testcase name="runScenario[5](&quot;Fill-up user education information&quot;, &quot;Optional[Fill-up education information]&quot;)" classname="Runner.CucumberRunner" time="44.651"/>
+  <testcase name="runScenario[6](&quot;Fill-up user job experience information&quot;, &quot;Optional[Fill-up job experience information]&quot;)" classname="Runner.CucumberRunner" time="16.547"/>
+  <testcase name="runScenario[7](&quot;Fill-up user certification information&quot;, &quot;Optional[Fill-up certification information]&quot;)" classname="Runner.CucumberRunner" time="8.723"/>
+  <testcase name="runScenario[8](&quot;Confirmation of given is correct&quot;, &quot;Optional[Confirmation of provided information is indeed accurate and reliable]&quot;)" classname="Runner.CucumberRunner" time="6.746"/>
+  <system-out><![CDATA[
+@jobCircularSelection
+Scenario: Select a job circular                  # src/test/resources/Feature/TC_01_CircularList.feature:3
+User selects a job circular
+  Given User lands on the job circular list page # StepDefinition.JobCircularSelectionStepdefs.userLandsOnTheJobCircularListPage()
+  When User selects a job circular               # StepDefinition.JobCircularSelectionStepdefs.userSelectsAJobCircular()
+User navigates to the post vacancy page
+  Then Navigate to post vacancy page             # StepDefinition.JobCircularSelectionStepdefs.navigateToPostVacancyPage()
+
+@vacancy
+Scenario: Select a vacancy                  # src/test/resources/Feature/TC_02_PostVacancy.feature:3
+User wants to select a vacancy
+  Given User lands on the post vacancy page # StepDefinition.PostVacancyStepdefs.userLandsOnThePostVacancyPage()
+  When User selects a vacancy               # StepDefinition.PostVacancyStepdefs.userSelectsAVacancy()
+User navigates to the vacancy details page
+  Then Navigate to the vacancy details page # StepDefinition.PostVacancyStepdefs.navigateToTheVacancyDetailsPage()
+
+@apply
+Scenario: Apply for a vacancy without login             # src/test/resources/Feature/TC_03_ApplyAVacancyWithoutLogin.feature:3
+User wants to apply a vacancy without login
+  Given User lands on a particular vacancy details page # StepDefinition.ApplyForAVacancyWithoutLoginStepdefs.userLandsOnAParticularVacancyDetailsPage()
+  When User clicks on the apply now button              # StepDefinition.ApplyForAVacancyWithoutLoginStepdefs.userClicksOnTheApplyNowButton()
+  And User clicks on the continue without login         # StepDefinition.ApplyForAVacancyWithoutLoginStepdefs.userClicksOnTheContinueWithoutLogin()
+User navigates to the job application page
+  Then Navigate to the job application page             # StepDefinition.ApplyForAVacancyWithoutLoginStepdefs.navigateToTheJobApplicationPage()
+
+@basicInfo
+Scenario Outline: Fill-up basic user information              # src/test/resources/Feature/TC_04_BasicInfo.feature:22
+User wants to fill-up basic information
+  Given User lands on the basic info pag                      # StepDefinition.BasicInfoStepdefs.userLandsOnTheBasicInfoPag()
+  When Insert '8231771135'                                    # StepDefinition.BasicInfoStepdefs.insertNidNumber(java.lang.String)
+  And Select nid file                                         # StepDefinition.BasicInfoStepdefs.selectNidFile()
+  And Select Dob                                              # StepDefinition.BasicInfoStepdefs.selectDob()
+  And Click on the verify nid button                          # StepDefinition.BasicInfoStepdefs.clickOnTheVerifyNidButton()
+Additional info shown
+  Then Personal information are shown                         # StepDefinition.BasicInfoStepdefs.personalInformationAreShown()
+  When Enter 'Md. Siddiq' , 'Amena Begum' , and '01702312169' # StepDefinition.BasicInfoStepdefs.enterFatherNameMotherNameAndMobileNumber(java.lang.String,java.lang.String,java.lang.String)
+Copy otp from the popup dialog box
+  Then OTP popups                                             # StepDefinition.BasicInfoStepdefs.otpPopups()
+Click ok on the popup dialog box
+  When Click on the ok button from the popup dialog box       # StepDefinition.BasicInfoStepdefs.clickOnTheOkButtonFromThePopupDialogBox()
+  And Enter otp                                               # StepDefinition.BasicInfoStepdefs.enterOtp()
+Click ok on the popup dialog box
+  And Click on the ok button from the popup dialog box        # StepDefinition.BasicInfoStepdefs.clickOnTheOkButtonFromThePopupDialogBox()
+  And Enter 'sajibsqa@gmail.com'                              # StepDefinition.BasicInfoStepdefs.enterEmailAddress(java.lang.String)
+  And Select Marital and religion                             # StepDefinition.BasicInfoStepdefs.selectMaritalAndReligion()
+  And Select photo and signature                              # StepDefinition.BasicInfoStepdefs.selectPhotoAndSignature()
+  And Click on the next button                                # StepDefinition.BasicInfoStepdefs.clickOnTheNextButton()
+User navigates to the address page
+  Then Navigate to the address page                           # StepDefinition.BasicInfoStepdefs.navigateToTheAddressPage()
+
+@address
+Scenario Outline: Fill-up user address information       # src/test/resources/Feature/TC_05_Address.feature:12
+User wants to fill-up address information
+  Given User lands on the address page                   # StepDefinition.AddressStepdefs.userLandsOnTheAddressPage()
+  When Select division, district and 'Ramna'             # StepDefinition.AddressStepdefs.selectDivisionDistrictAndThana(java.lang.String)
+  And Type 'Test post office', '1212' and 'Test address' # StepDefinition.AddressStepdefs.typePostOfficePostCodeAndAddress(java.lang.String,java.lang.String,java.lang.String)
+  And Click on the same as permanent address checkbox    # StepDefinition.AddressStepdefs.clickOnTheSameAsPermanentAddressCheckbox()
+  And Proceed to next                                    # StepDefinition.AddressStepdefs.proceedToNext()
+User navigates to the education page
+  Then Navigate to education page                        # StepDefinition.AddressStepdefs.navigateToEducationPage()
+
+@education
+Scenario Outline: Fill-up user education information           # src/test/resources/Feature/TC_06_Education.feature:11
+User wants to fill-up education information
+  Given User lands on the education page                       # StepDefinition.EducationStepdefs.userLandsOnTheEducationPage()
+  When Select hsc exam, 'science', 'bit', '2010', '5' and '5'  # StepDefinition.EducationStepdefs.selectHscExamHscSubHscBoardHscPassingYrGpaScaleHscAndHscResult(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+  And Select ssc exam, 'science', 'dhaka', '2008', '5' and '5' # StepDefinition.EducationStepdefs.selectSscExamSscSubSscBoardSscPassingYrGpaScaleSscAndSscResult(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+  And Click on next button                                     # StepDefinition.EducationStepdefs.clickOnNextButton()
+User navigates to the job experience page
+  Then Navigate to job experience page                         # StepDefinition.EducationStepdefs.navigateToJobExperiencePage()
+
+@jobExperience
+Scenario Outline: Fill-up user job experience information # src/test/resources/Feature/TC_07_JobExperience.feature:11
+User wants to fill-up job experience information
+  Given User lands on the ob experience page              # StepDefinition.JobExperienceStepdefs.userLandsOnTheObExperiencePage()
+  When Type 'ABC LTD'                                     # StepDefinition.JobExperienceStepdefs.typeOrgName(java.lang.String)
+  And Select '3rd Engineer', '11102010'                   # StepDefinition.JobExperienceStepdefs.selectDesignationStartDate(java.lang.String,java.lang.String)
+  And Put 'Test job address'                              # StepDefinition.JobExperienceStepdefs.putJobAddress(java.lang.String)
+User navigates to the certificate page
+  Then Navigate to certificate page                       # StepDefinition.JobExperienceStepdefs.navigateToCertificatePage()
+
+@certificate
+Scenario Outline: Fill-up user certification information # src/test/resources/Feature/TC_08_Certificate.feature:10
+User wants to fill-up certification information
+  Given User lands on the certificate page               # StepDefinition.CertificateStepdefs.userLandsOnTheCertificatePage()
+  When Select '3' and duration type                      # StepDefinition.CertificateStepdefs.selectDurationAndDurationType(java.lang.String)
+  And Proceed forward                                    # StepDefinition.CertificateStepdefs.proceedForward()
+User navigates to the declaration page
+  Then Navigate to declaration page                      # StepDefinition.CertificateStepdefs.navigateToDeclarationPage()
+
+@declaration
+Scenario: Confirmation of given is correct # src/test/resources/Feature/TC_09_Declaration.feature:3
+User wants to confirm the provided information
+  Given User lands on the declaration page # StepDefinition.DeclarationStepdefs.userLandsOnTheDeclarationPage()
+  When Click on the checkbox               # StepDefinition.DeclarationStepdefs.clickOnTheCheckbox()
+  And Confirm                              # StepDefinition.DeclarationStepdefs.confirm()
+  Then Navigate to payment page            # StepDefinition.DeclarationStepdefs.navigateToPaymentPage()
+]]></system-out>
+  <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+1710238754626	geckodriver	INFO	Listening on 127.0.0.1:63738
+1710238755385	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62047" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\rozar\\AppData\\Local\\Temp\\rust_mozprofilewE2V5I"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1710238755807	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1710238755921	Marionette	INFO	Listening on port 52053
+WebDriver BiDi listening on ws://127.0.0.1:62047
+Read port: 52053
+1710238756183	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62047/devtools/browser/9815b560-e406-4836-8256-5c9bfba2e4eb
+Mar 12, 2024 4:19:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+JavaScript error: http://123.200.20.20:5302/assets/js/core/app-menu.min.js, line 1: TypeError: e is null
+JavaScript error: http://123.200.20.20:5302/assets/js/core/app-menu.min.js, line 1: TypeError: e is null
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://123.200.20.20:5302."
+JavaScript error: http://123.200.20.20:5302/assets/js/core/app-menu.min.js, line 1: TypeError: e is null
+1710238786932	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 7: TypeError: c is undefined
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 7: TypeError: c is undefined
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 7: TypeError: c is undefined
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 6: TypeError: format() expects a string or boolean:false parameter function(){for(var b=1===arguments.length&&a.isArray(arguments[0])?arguments[0]:arguments,c=this,d=0;d<b.length;d++){var e=new RegExp("\\{"+d+"\\}","gm");c=c.replace(e,b[d])}return c}
+JavaScript error: http://123.200.20.20:5302/assets/datetime/tempusdominus-bootstrap-4.min.js, line 7: TypeError: c is undefined
+1710238928443	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.sys.mjs:219:24
+TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:203:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:468:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:219:33
+]]></system-err>
+</testsuite>
