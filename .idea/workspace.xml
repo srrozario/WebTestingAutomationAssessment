@@ -4,54 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff9acbfe-f4be-46a4-8ea2-c44ae4278973" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example_nid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Core/Helper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/POM/AddressPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/POM/BasicInfoPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/POM/CertificatePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/POM/CircularListPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/POM/DeclarationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/POM/EducationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/POM/JobExperiencePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/POM/PostVacancyPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/POM/VacancyDetailPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Runner/CucumberRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/AddressStepdefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/ApplyForAVacancyWithoutLoginStepdefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/BasicInfoStepdefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/CertificateStepdefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/DeclarationStepdefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/EducationStepdefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/JobCircularSelectionStepdefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/JobExperienceStepdefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/PostVacancyStepdefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Feature/TC_01_CircularList.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Feature/TC_02_PostVacancy.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Feature/TC_03_ApplyAVacancyWithoutLogin.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Feature/TC_04_BasicInfo.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Feature/TC_05_Address.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Feature/TC_06_Education.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Feature/TC_07_JobExperience.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Feature/TC_08_Certificate.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Feature/TC_09_Declaration.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Images/example_nid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Images/photo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Images/test_signature.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/webTestingAutomationAssessment.xml" afterDir="false" />
+    <list default="true" id="ff9acbfe-f4be-46a4-8ea2-c44ae4278973" name="Changes" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +16,31 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="webTestingAutomationAssessment" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="webTestingAutomationAssessment" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -90,6 +69,11 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "module"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -185,6 +169,14 @@
       <option name="presentableId" value="Default" />
       <updated>1709701478566</updated>
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1710240217438</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710240217438</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,5 +189,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>
