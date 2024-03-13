@@ -1,6 +1,6 @@
 # Cucumber behavior driven development (BDD) test automation framework using Selenium with Java and Gradle
 ## Introduction
-This project aims to automate the end-to-end product purchase journey on the Magento website using Selenium WebDriver for browser automation and Cucumber for Behavior-Driven Development (BDD). The Page Object Model (POM) framework is employed for efficient test maintenance and reusability.
+This project aims to automate the end-to-end  journey on the job portal using Selenium WebDriver for browser automation and Cucumber for Behavior-Driven Development (BDD). The Page Object Model (POM) framework is employed for efficient test maintenance and reusability.
 ## Prerequisite software
 - [Download & Install JDK](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
 - [Download & Install IntelliJ IDEA Community Version](https://www.jetbrains.com/idea/download/#section=windows)
